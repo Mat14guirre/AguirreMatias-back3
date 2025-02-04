@@ -6,6 +6,7 @@ import mockingRouter from "./routes/mocks.router.js";
 import mongoose from "mongoose";
 
 
+
 const app= express();
 const PUERTO = 9000;
 const connection = mongoose.connect(`mongodb+srv://matiasaguirre269:1BR6PQBKnN6ga6mS@cluster0.nlvme.mongodb.net/Adopciones`)

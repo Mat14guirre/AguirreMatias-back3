@@ -1,6 +1,6 @@
 import { Router } from "express";
 const router = Router(); 
-// import generarUsuarios from "../utils/util.js";
+import generarUsuarios from "../utils/util.js";
 import CustomError from "../services/errors/customError.js";
 import { generarInfoError } from "../services/errors/info.js";
 import { EErrors } from "../services/errors/enum.js";
@@ -33,15 +33,15 @@ router.post("/",async (req,res,next)=>{
     }
 })
 
-// router.get("/", (req, res) => {
-//     //Generamos un array de usuarios: 
-//     const usuarios = []; 
+router.get("/", (req, res) => {
+    //Generamos un array de usuarios: 
+    const usuarios = []; 
 
-//     for(let i = 0; i < 100; i++) {
-//         usuarios.push(generarUsuarios()); 
-//     }
-//     res.json(usuarios);
-// })
+    for(let i = 0; i < 100; i++) {
+        usuarios.push(generarUsuarios()); 
+    }
+     res.json(usuarios);
+})
 
 
 
